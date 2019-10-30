@@ -1,0 +1,153 @@
+﻿@model Yardimci.Entities.Calisan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+        <h2>Detaylar</h2>
+    </div>   
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div>
+
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Ad)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Ad)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SoyAd)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SoyAd)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tip)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tip)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TelefonNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TelefonNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.KullaniciAdi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.KullaniciAdi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sifre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Sifre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProfileImageFileName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProfileImageFileName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SaatlikUcret)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SaatlikUcret)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.YaptigiIs)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.YaptigiIs)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AktivasyonGuid)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AktivasyonGuid)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OlusturulmaZamani)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OlusturulmaZamani)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DegistirilmeZamani)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DegistirilmeZamani)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DegistirenKullanici)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DegistirenKullanici)
+                </dd>
+
+            </dl>
+        </div>
+
+    </div>
+
+    <div class="col-md-8 col-md-offset-2">
+        <p>
+            <a href="/Calisan/Edit/@Model.ID" class="btn btn-warning">
+                <span class="glyphicon glyphicon-edit"></span> Düzenle
+            </a>
+
+            <a href="/Calisan/Index" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span> Çalışanlara Dön
+            </a>
+
+        </p>
+    </div>
+</div>
+

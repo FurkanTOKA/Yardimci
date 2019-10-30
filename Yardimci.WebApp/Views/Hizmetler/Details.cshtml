@@ -1,0 +1,77 @@
+﻿@model Yardimci.Entities.Hizmetler
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Detaylar</h2>
+
+        </div>
+        
+    </div>
+
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h4>Hizmetler</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Baslik)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Baslik)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HizmetTuru)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HizmetTuru)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OlusturulmaZamani)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OlusturulmaZamani)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DegistirilmeZamani)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DegistirilmeZamani)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DegistirenKullanici)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DegistirenKullanici)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <p>
+            <a href="/Hizmetler/Edit/@Model.ID" class="btn btn-warning">
+                <span class="glyphicon glyphicon-edit"></span> Düzenle
+            </a>
+
+            <a href="/Hizmetler/Index" class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span> Hizmetlere Dön
+            </a>
+            
+        </p>
+    </div>
+</div>
+

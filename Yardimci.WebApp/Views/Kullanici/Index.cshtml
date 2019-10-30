@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Yardimci.Entities.Kullanici>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+
+        <h2>Kullanıcılar</h2>
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-0 ">
+        <div class="col-md-10 col-md-offset-0">
+            <p>
+
+                <a href="/Kullanici/Create" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span> Ekle
+                </a>
+            </p>
+
+            <table class="table">
+                <tr>
+                    
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ad)
+                   </th>
+
+                    
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoyAd)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TelefonNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.KullaniciAdi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sifre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProfileImageFileName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AktifMi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AdminMi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.YardimciMi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AktivasyonGuid)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OlusturulmaZamani)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DegistirilmeZamani)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DegistirenKullanici)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoyAd)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TelefonNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.KullaniciAdi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sifre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProfileImageFileName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AktifMi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AdminMi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.YardimciMi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AktivasyonGuid)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OlusturulmaZamani)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DegistirilmeZamani)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DegistirenKullanici)
+                        </td>
+                        <td>
+
+                            <a href="/Kullanici/Edit/@item.ID" class="btn btn-warning btn-sm" title="Düzenle">
+                                <span class="glyphicon glyphicon-edit"></span>Düzenle
+                            </a>
+
+                            <a href="/Kullanici/Details/@item.ID" class="btn btn-info btn-sm" title="Detayları Gör">
+                                <span class="glyphicon glyphicon-search"></span>Detaylar
+                            </a>
+                            <a href="/Kullanici/Delete/@item.ID" class="btn btn-danger btn-sm" title="Sil">
+                                <span class="glyphicon glyphicon-trash"></span>Sil
+
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+        
+
+        
+
+    </div>
+
+</div>
+
+
+
+
+
+

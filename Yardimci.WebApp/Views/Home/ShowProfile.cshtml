@@ -1,0 +1,49 @@
+﻿@using Yardimci.Entities
+@model Kullanici
+
+@{
+    ViewBag.Title = "ShowProfile";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <h2>@ViewBag.Tittle</h2>
+        <hr />
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <img src="~/images/@Model.ProfileImageFileName" class="img-circle" width="128" height="128" />
+        </div>
+        <div class="col-md-8">
+            <h3>@(Model.Ad + " " + Model.SoyAd)</h3>
+            <br />
+            <h5><b>Kullanıcı Adı: </b>@Model.KullaniciAdi</h5>
+            <h5><b>Email: </b>@Model.Email</h5>
+            <h5><b>Telefon No: </b>@Model.TelefonNo</h5>
+            
+            <br />
+            <h6><a href="/Home/ShowProfile2">Daha fazla...</a></h6>
+        </div>
+
+        <div class="col-md-2 text-right">
+            <div class="btn-group">
+                <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                    <span class="glyphicon glyphicon-cog">&nbsp;</span>
+                    Ayarlar
+                    <span class="icon-cog icon-white"></span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="@Url.Action("EditProfile")"><span class="glyphicon glyphicon-edit">&nbsp;</span>Düzenle</a></li>
+                    <li><a href="@Url.Action("DeleteProfile")" onclick="return confirm('Profili silmek istediğinizden emin misiniz?');"<span class="glyphicon glyphicon-trash">&nbsp;</span>Sil</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+

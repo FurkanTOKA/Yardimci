@@ -1,0 +1,78 @@
+﻿@using Yardimci.Entities.ValueObjects
+
+
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = "Yardımcı.Net - Kayıt Sayfası";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/login-register.css" rel="stylesheet" />
+
+
+@using (Html.BeginForm())
+{
+    <section class="login-info">
+        <div class="container">
+            <div class="row main">
+                <div class="form-header">
+                    <h1 class="text-center ">Kayıt Formu</h1>
+                </div>
+                <div class="main-content">
+
+                    @Html.ValidationSummary(false)
+
+                    <div class="input-group ">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        @Html.TextBoxFor(model => model.KullaniciAdi, new { @class = "form-control", placeholder = "Lütfen Kullanıcı Adınızı Girin" })
+                    </div>
+                    <div class="input-group ">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        @Html.TextBoxFor(model => model.Ad, new { @class = "form-control", placeholder = "Lütfen Adınızı Girin" })
+                    </div>
+                    <div class="input-group ">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        @Html.TextBoxFor(model => model.SoyAd, new { @class = "form-control", placeholder = "Lütfen Soyadınızı Adınızı Girin" })
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+
+                        @Html.TextBoxFor(model => model.Sifre, new { @class = "form-control", placeholder = "Şifrenizi Giriniz", type = "password" })
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+
+                        @Html.TextBoxFor(model => model.ReSifre, new { @class = "form-control", placeholder = "Şifre Tekrar", type = "password" })
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "E-posta adresinizi giriniz" })
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+
+                        @Html.TextBoxFor(model => model.ReEmail, new { @class = "form-control", placeholder = "E-posta adresinizi tekrar giriniz" })
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+
+                        @Html.TextBoxFor(model => model.TelefonNo, new { @class = "form-control", placeholder = "Telefon numaranızı giriniz" })
+                    </div>
+
+
+
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block login-button">Kayıt Ol</button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+}

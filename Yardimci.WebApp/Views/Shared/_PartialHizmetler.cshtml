@@ -1,0 +1,25 @@
+﻿
+@using Yardimci.BusinessLayer
+@using Yardimci.Entities
+
+@{ 
+    HizmetlerManager hm = new HizmetlerManager();
+
+    List<Hizmetler> list = hm.List();
+}
+
+
+
+
+<p class="lead">Hizmetler</p>
+<div class="list-group">
+    <a href="/Home/Index" class="list-group-item"><span class="glyphicon glyphicon-arrow-right"></span>Tüm Hizmetler</a>
+
+    @foreach (Hizmetler hiz in list)
+    {
+        <a href="/Home/ByHizmetler/@hiz.ID"title="@hiz.HizmetTuru" class="list-group-item"><span class="glyphicon glyphicon-arrow-right"></span>@hiz.Baslik</a>
+    }
+
+
+
+</div>

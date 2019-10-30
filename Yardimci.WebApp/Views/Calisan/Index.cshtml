@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Yardimci.Entities.Calisan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <h2>Hizmetler</h2>
+        <hr/>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <p>
+
+            <a href="/Calisan/Create" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span> Ekle
+            </a>
+        </p>
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SoyAd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tip)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TelefonNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KullaniciAdi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sifre)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.SaatlikUcret)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YaptigiIs)
+                </th>
+
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoyAd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TelefonNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KullaniciAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sifre)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SaatlikUcret)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YaptigiIs)
+                    </td>
+
+
+                    <td>
+                        <a href="/Calisan/Edit/@item.ID" class="btn btn-warning btn-sm" title="Düzenle">
+                            <span class="glyphicon glyphicon-edit"></span>Düzenle
+                        </a>
+
+                        <a href="/Calisan/Details/@item.ID" class="btn btn-info btn-sm" title="Detayları Gör">
+                            <span class="glyphicon glyphicon-search"></span>Detaylar
+                        </a>
+                        <a href="/Calisan/Delete/@item.ID" class="btn btn-danger btn-sm" title="Sil">
+                            <span class="glyphicon glyphicon-trash"></span>Sil
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+

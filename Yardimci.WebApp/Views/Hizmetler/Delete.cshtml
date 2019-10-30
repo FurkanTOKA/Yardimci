@@ -1,0 +1,79 @@
+﻿@model Yardimci.Entities.Hizmetler
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h2>Hizmet Sil</h2>
+        <h3>Seçilen hizmeti silmek istediğinizden emin misiniz?</h3>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div>
+            
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Baslik)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Baslik)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.HizmetTuru)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.HizmetTuru)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OlusturulmaZamani)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OlusturulmaZamani)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DegistirilmeZamani)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DegistirilmeZamani)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DegistirenKullanici)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DegistirenKullanici)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Sil</button>
+            @Html.ActionLink("Hizmetleri Gör", "Index", "Hizmetler", null, new { @class = "btn btn-default" })
+        </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+
